@@ -6,23 +6,29 @@ class List {
 
     add(data){
         this.data.push(data);
+        console.log(this.data);
+        
     }
 }
 
 
 class TodoList extends List {
-  constructor(){
-    this.todos = [];
-  }
-  
-  addTodo(){
-      this.todos.push('Novo tudo');
-      console.log(this.todos);
-  }
+    constructor(){
+        super();
+
+        this.usuario = 'Roberto';
+    }
+    
+    mostrarUsuario(){
+        console.log(this.usuario);
+        
+    }
 }
 
 const MinhaLista = new TodoList();
 
 document.getElementById('novotodo').onclick = function () {
-    MinhaLista.addTodo();
+    MinhaLista.add('NovoTodo');
 }
+
+MinhaLista.mostrarUsuario();
