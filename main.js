@@ -1,0 +1,9 @@
+class Matematica {
+    metodo(){
+        
+    }
+
+    outro(){
+
+    }
+}
